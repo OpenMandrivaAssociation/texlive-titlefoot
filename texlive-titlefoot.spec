@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-titlefoot
 Version:	20070117
-Release:	7
+Release:	8
 Summary:	Add special material to footer of title page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/titlefoot
