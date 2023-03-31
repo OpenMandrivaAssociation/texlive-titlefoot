@@ -1,6 +1,6 @@
 Name:		texlive-titlefoot
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Add special material to footer of title page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/titlefoot
