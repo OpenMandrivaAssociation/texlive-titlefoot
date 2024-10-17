@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Add special material to footer of title page
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/titlefoot
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/titlefoot
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/titlefoot.r%{version}.tar.xz
 BuildArch:	noarch
