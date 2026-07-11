@@ -1,41 +1,22 @@
-Name:		texlive-titlefoot
-Version:	15878
-Release:	2
+%global tl_name titlefoot
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Add special material to footer of title page
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/titlefoot
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/titlefoot.r%{version}.tar.xz
+License:	lppl1
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/titlefoot.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Provides the capability of adding keywords (with a \keywords
-command), a running title (\runningtitle), AMS subject
-classifications (\amssubj), and an 'author's footnote' as
-footnotes to the title or first page of a document. Works with
-any class for which the \thanks macro works (e.g., article).
+Provides the capability of adding keywords (with a \keywords command), a
+running title (\runningtitle), AMS subject classifications (\amssubj),
+and an 'author's footnote' as footnotes to the title or first page of a
+document. Works with any class for which the \thanks macro works (e.g.,
+article).
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/titlefoot/titlefoot.sty
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex %{buildroot}%{_texmfdistdir}
